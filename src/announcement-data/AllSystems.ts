@@ -13,6 +13,7 @@ import TfLJubileeLine from './systems/rolling-stock/TfLJubileeLine'
 import TfLNorthernLine from './systems/rolling-stock/TfLNorthernLine'
 import TfLElizabethLine from './systems/rolling-stock/TfLElizabeth'
 import LnerAzuma from './systems/rolling-stock/LNERAzuma'
+import StadlerSupertram from './systems/rolling-stock/StadlerSupertram'
 
 import TrainAnnouncementSystem from './TrainAnnouncementSystem'
 import StationAnnouncementSystem from './StationAnnouncementSystem'
@@ -34,7 +35,7 @@ export const AllStationAnnouncementSystems: (typeof StationAnnouncementSystem)[]
   ScotRail,
 ]
 
-export const AllOtherAnnouncementSystems: (typeof AnnouncementSystem)[] = [TfLJubileeLine, TfLNorthernLine, TfLElizabethLine]
+export const AllOtherAnnouncementSystems: (typeof AnnouncementSystem)[] = [TfLJubileeLine, TfLNorthernLine, TfLElizabethLine, StadlerSupertram]
 
 export const AllAnnouncementSystems: (typeof AnnouncementSystem)[] = [
   ...AllStationAnnouncementSystems,

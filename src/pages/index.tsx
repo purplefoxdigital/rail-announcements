@@ -24,6 +24,7 @@ const Systems = [
       { title: 'TfL Jubilee Line', url: '/rolling-stock/tfl/jubilee-line' },
       { title: 'TfL Northern Line', url: '/rolling-stock/tfl/northern-line' },
       { title: 'TfL Elizabeth Line', url: '/rolling-stock/tfl/elizabeth-line' },
+      { title: 'Class 399 Supertram', url: '/rolling-stock/stadler-supertram' },
     ],
   },
   {

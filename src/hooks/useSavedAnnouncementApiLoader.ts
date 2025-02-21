@@ -12,6 +12,7 @@ const idToPath: Record<string, string> = {
   TFW_TRAINFX_V1: '/rolling-stock/tfw-trainfx',
   TFW_TELEVIC_V1: '/rolling-stock/tfw-televic',
   LNER_AZUMA_V1: '/rolling-stock/lner-azuma',
+  STADLER_SUPERTRAM_V1: '/rolling-stock/stadler-supertram',
 
   TFL_ELIZ_LINE_V1: '/rolling-stock/tfl/elizabeth-line',
   TFL_JUBILEE_LINE_V1: '/rolling-stock/tfl/jubilee-line',

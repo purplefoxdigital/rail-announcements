@@ -7,6 +7,7 @@ interface IDepartingStopAnnouncementOptions {
   routeName: string
   terminatesAtCode: string
   nextStationCode: string
+  nextStopByRequest: boolean
 }
 
 export default class StadlerSupertram extends AnnouncementSystem {
@@ -40,7 +41,15 @@ export default class StadlerSupertram extends AnnouncementSystem {
 
     files.push(
       `stations.${options.terminatesAtCode}`,
-      'the next stop by request will be',
+    )
+
+    if (options.nextStopByRequest == true && options.terminatesAtCode != options.nextStationCode) {
+      files.push('the next stop by request will be')
+    } else {
+      files.push('the next stop will be')
+    }
+
+    files.push(
       `stations.${options.nextStationCode}`,
     )
 
@@ -120,6 +129,7 @@ export default class StadlerSupertram extends AnnouncementSystem {
         routeName: this.Routes[0],
         terminatesAtCode: this.AllStations[0].code,
         nextStationCode: this.AllStations[0].code,
+        nextStopByRequest: true,
       },
       props: {
         playHandler: this.playDepartingStopAnnouncement.bind(this),
@@ -141,6 +151,11 @@ export default class StadlerSupertram extends AnnouncementSystem {
             default: this.AllStations[0].code,
             options: this.AllStations.map(s => ({ title: s.name, value: s.code })),
             type: 'select',
+          },
+          nextStopByRequest: {
+            name: 'Next stop by request?',
+            type: 'boolean',
+            default: true,
           },
         },
       },
